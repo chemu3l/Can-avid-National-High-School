@@ -3,18 +3,25 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--green-background-color);
-  padding: 5px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   color: white;
   font-size: 14px;
   align-items: center;
 }
-.right-to-bar{
+#top-bar-trapezoid p{
+  font-family: var(--thirdy-font-family);
+}
+.right-top-bar{
     display: flex;
 }
+.left-top-bar{
+    display: flex;
+    width: 21%;
+}
 #top-bar-trapezoid{
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-  width: 500px;
-  background-color: black;
+  clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
+  width: 400px;
+  background-color: white;
 }
 
 .top-bar .facebook-icon {
@@ -44,6 +51,7 @@
 
 .logo-section span {
   font-weight: bold;
+  font-family: var(--thirdy-font-family);
   font-size: 18px;
   color: #333;
 }
@@ -52,11 +60,10 @@
   background-color: #6b8e23;
   color: white;
   border: none;
-  padding: 8px 15px;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
   cursor: pointer;
 }
 
@@ -67,49 +74,25 @@
 /* Navbar */
 .navbar {
   background-color: var(--green-background-color);
+  font-family: var(--secondary-font-family);
 }
 
 .navbar ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 0px 40px;
   padding: 5px var(--left-margin);
-  gap: 20px;
+  gap: 50px;
+  font-family: var(--secondary-font-family);
 }
 
 .navbar ul li {
   position: relative;
   color: white;
   cursor: pointer;
-  padding: 8px 10px;
 }
 
 .navbar ul li:hover {
   background-color: var(--green-background-color);
   border-radius: 5px;
-}
-
-/* Dropdown menu */
-.navbar ul li .dropdown {
-  display: none;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  background-color: #6b8e23;
-  list-style: none;
-  padding: 5px 0;
-  min-width: 150px;
-  border-radius: 5px;
-}
-
-.navbar ul li:hover .dropdown {
-  display: block;
-}
-
-.navbar ul li .dropdown li {
-  padding: 8px 15px;
-}
-
-.navbar ul li .dropdown li:hover {
-  background-color: #556b2f;
 }

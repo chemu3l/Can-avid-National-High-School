@@ -4,14 +4,20 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #EEEEEE;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --left-margin: 20%;
-  --green-background-color: #5E936C
+  --green-background-color: #5E936C;
+  --white-background-color: #F3F4F6;
+  --primary-font-family: 'Poppins';
+  --secondary-font-family: 'Rosarivo';
+  --thirdy-font-family: 'Roboto';
+  --primary-font-color: #FFFFFF;
+  --title-font-size: 45px;
 }
 
 a {

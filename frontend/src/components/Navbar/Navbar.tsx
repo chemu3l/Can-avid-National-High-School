@@ -1,20 +1,25 @@
-import React from "react";
-import "../../assets/styles/navbar.css";
-import logo from "../../assets/images/logo.jpg";
-import { FaFacebookF, FaEnvelope } from "react-icons/fa";
+import { logo } from "../../assets/images";
+import DropdownButton from "../Button/DropdownButton";
+import { FaFacebookF, FaEnvelope, } from "../../icons";
+import { aboutUsMenuItems, admissionMenuItems, navigationLabels } from "../../constants/navigationDropdowns";
+
 
 const Navbar = () => {
+  const handleSelect = (key: string) => {
+    console.log("Selected:", key);
+  };
   return (
     <header>
-
       {/* Top Bar */}
       <div className="top-bar">
-        <div className="right-to-bar">
+        <div className="right-top-bar">
           <div id="top-bar-trapezoid">
           </div>
           <p>Join with us and be part of the success</p>
         </div>
-        <FaFacebookF className="facebook-icon" />
+        <div className="left-top-bar">
+          <FaFacebookF className="facebook-icon" />
+        </div>
       </div>
 
       {/* Main Header */}
@@ -28,27 +33,30 @@ const Navbar = () => {
           <FaEnvelope className="envelope-icon" />
         </button>
       </div>
-
       {/* Navigation Menu */}
       <nav className="navbar">
         <ul>
-          <li>Home</li>
+          <li>{navigationLabels.home}</li>
           <li>
-            About Us
-            <ul className="dropdown">
-              <li>History</li>
-              <li>Mission & Vision</li>
-            </ul>
+            <DropdownButton
+              label={navigationLabels.aboutUs}
+              items={aboutUsMenuItems}
+              onSelect={handleSelect}
+              closeOnSelect={true} // optional, defaults to true
+              className="dropdown-button"
+            />
           </li>
           <li>
-            Admission
-            <ul className="dropdown">
-              <li>Requirements</li>
-              <li>Process</li>
-            </ul>
+            <DropdownButton
+              label={navigationLabels.admission}
+              items={admissionMenuItems}
+              onSelect={handleSelect}
+              closeOnSelect={true} // optional, defaults to true
+              className="dropdown-button"
+            />
           </li>
-          <li>Career</li>
-          <li>Contact Us</li>
+          <li>{navigationLabels.career}</li>
+          <li>{navigationLabels.contactUs}</li>
         </ul>
       </nav>
     </header>
