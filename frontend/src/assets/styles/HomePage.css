@@ -1,0 +1,35 @@
+.VMCV-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 20px;
+    color: #000;
+}
+
+.VMCV-card {
+    flex: 1;
+    padding: 0px 20px;
+    /* border: 1px solid #e5e5e5;
+    background: #fff; */
+    border-radius: 6px;
+    align-items: center;    
+}
+.VMCV-section .VMCV-card .title-content{
+    width: 50%;
+    text-align: center;
+    border-radius: 6px;
+    background-color: var(--green-background-color);
+    padding: 10px;
+    margin:  10px auto;
+    color: var(--primary-font-color);
+}
+.VMCV-section .VMCV-card .description-content{
+    font-size: 12px;
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 50px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    height: 300px;
+    whiteSpace: "pre-line"
+}

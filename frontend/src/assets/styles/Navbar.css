@@ -1,0 +1,98 @@
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--green-background-color);
+  padding: 10px 0px 0px 0px;
+  color: white;
+  font-size: 14px;
+  align-items: center;
+}
+#top-bar-trapezoid p{
+  font-family: var(--thirdy-font-family);
+}
+.right-top-bar{
+    display: flex;
+}
+.left-top-bar{
+    display: flex;
+    width: 21%;
+}
+#top-bar-trapezoid{
+  clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
+  width: 400px;
+  background-color: white;
+}
+
+.top-bar .facebook-icon {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Main header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px var(--left-margin);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-section img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-section span {
+  font-weight: bold;
+  font-family: var(--thirdy-font-family);
+  font-size: 18px;
+  color: #333;
+}
+
+.message-button {
+  background-color: #6b8e23;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.message-button .envelope-icon {
+  font-size: 16px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--green-background-color);
+  font-family: var(--secondary-font-family);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0px 40px;
+  padding: 5px var(--left-margin);
+  gap: 50px;
+  font-family: var(--secondary-font-family);
+}
+
+.navbar ul li {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar ul li:hover {
+  background-color: var(--green-background-color);
+  border-radius: 5px;
+}
