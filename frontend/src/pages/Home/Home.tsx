@@ -1,10 +1,15 @@
 import { heroLandingImages } from "../../assets/images";
 import HeroSection from "../../components/Hero/HeroSection";
 import { buttonLabel } from "../../constants/buttonConstants";
-import {VMCVTitle, VMCVDescription } from "../../constants/VMCVCardConstants";
+import { VMCVTitle, VMCVDescription } from "../../constants/VMCVCardConstants";
+import { newsData } from "../../constants/mockData";
 import { FaAngleDoubleRight } from "../../icons";
+import NewsCard from "../../components/Card/NewsCard";
 
 const Home = () => {
+  const newestThree = newsData
+  .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+  .slice(0, 3);
   return (
     <div className="home-page">
       <HeroSection
@@ -35,6 +40,23 @@ const Home = () => {
             </ul>
           </div>
         </div>
+      </div>
+
+
+      <div className="home-news-section">
+            <div className="home-news-class">LATEST ANNOUNCEMENTS & EVENTS</div>
+            <div className="home-news-class-card">
+              {newestThree.map((item) => (
+                <NewsCard
+                  key={item.id}
+                  cardTitle={item.title}
+                  cardDescription={item.description}
+                  image={heroLandingImages}
+                  className="News-Card-Title"
+                  onClick={() => console.log("Clicked:", item.id)}
+                />
+              ))}
+            </div>
       </div>
     </div>
   );
