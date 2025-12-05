@@ -1,15 +1,15 @@
-import { type DropdownItem }  from "../components/Button/DropdownButton";
+import type { DropdownItemInterface } from "../types/Dropdown.interface";
 
-const aboutUsMenuItems: DropdownItem[] = [
-  { key: "1", label: "Department" },
-  { key: "2", label: "Announcements" },
-  { key: "3", label: "Events" },
-  { key: "4", label: "MOOE" },
+const aboutUsMenuItems: DropdownItemInterface[] = [
+  { key: "1", label: "Department", path: "/about/departments" },
+  { key: "2", label: "Announcements", path: "/about/announcements" },
+  { key: "3", label: "Events", path: "/about/events" },
+  { key: "4", label: "MOOE", path: "/about/mooe" },
 ];
 
-const admissionMenuItems: DropdownItem[] = [
-  { key: "1", label: "Department" },
-  { key: "2", label: "Announcements" },
+const admissionMenuItems: DropdownItemInterface[] = [
+  { key: "1", label: "Request form", path: "/admission/request-form" },
+  { key: "2", label: "Ask Form", path: "/admission/ask-form" },
 ];
 
 const navigationLabels = { 

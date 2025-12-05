@@ -1,29 +1,40 @@
 import React from "react";
-import { Card } from "antd";
+import { Space } from "../../icons/antdImports";
+import RegularCard from "./RegularCard";
+import SpecialCard from "./SpecialCard";
+import type { NewsCardInterface } from "../../types/NewsCard.interface";
 
-
-interface NewsCardProps {
-  cardType?: string;
-  cardTitle?: string;
-  cardDescription?: string;
-  className?: string;
-  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void; // Card uses div
-  image?: string; // URL for image
-}
-
-const NewsCard: React.FC<NewsCardProps> = ({
+const NewsCard: React.FC<NewsCardInterface> = ({
   cardType,
   cardTitle,
-  cardDescription,
+  cardDate,
   className,
   image,
+  isAnnouncementsOrEvents
 }) => {
+
   return (
-  <Card className={className} title={cardType}>
-    <Card type="inner" title={cardTitle}> 
-      {cardDescription}
-    </Card>
-  </Card>
+  <Space vertical size="middle">
+    {isAnnouncementsOrEvents ? (
+        <SpecialCard
+          isAnnouncementsOrEvents={isAnnouncementsOrEvents}
+          cardType={cardType}
+          cardTitle={cardTitle}
+          cardDate={cardDate}
+          className={className}
+          image={image}
+        />
+      ) : (
+        <RegularCard
+          isAnnouncementsOrEvents={isAnnouncementsOrEvents}
+          cardType={cardType}
+          cardTitle={cardTitle}
+          cardDate={cardDate}
+          className={className}
+          image={image}
+        />
+      )}
+  </Space>
   );
 };
 

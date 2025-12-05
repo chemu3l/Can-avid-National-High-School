@@ -1,56 +1,34 @@
-import React, { useState } from "react";
-import type { MenuProps, DropdownProps } from "antd";
-import { DownOutlined } from "../../icons";
-import { Dropdown, Space } from "antd";
+import React from "react";
+import type { MenuProps } from "antd";
+import { Dropdown, Space } from "../../icons/antdImports";
+import { DownOutlined } from "../../icons/antdImports";
+import type { DropdownButtonInterface } from "../../types/Dropdown.interface";
+import { useNavigate } from "react-router-dom";
 
-// Type for each menu item
-export interface DropdownItem {
-  key: string;
-  label: React.ReactNode;
-}
-
-// Props for the component
-interface DropdownButtonProps {
-  label: string;
-  items: DropdownItem[];
-  onSelect?: (key: string) => void;
-  closeOnSelect?: boolean; // if true, dropdown closes on item click
-  className?: string;
-}
-
-const DropdownButton: React.FC<DropdownButtonProps> = ({
+const DropdownButton: React.FC<DropdownButtonInterface> = ({
   label,
   items,
-  onSelect,
-  closeOnSelect = true,
-    className,
+  className,
 }) => {
-  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // handle menu click
-  const handleMenuClick: MenuProps["onClick"] = (e) => {
-    onSelect?.(e.key);
-    if (closeOnSelect) setOpen(false);
-  };
-
-  // handle dropdown open/close
-  const handleOpenChange: DropdownProps["onOpenChange"] = (nextOpen, info) => {
-    if (info.source === "trigger" || nextOpen) {
-      setOpen(nextOpen);
+  const handleClick: MenuProps["onClick"] = (e) => {
+    const selectedItem = items.find(item => item.key === e.key);
+    if (selectedItem?.path) {
+      console.log("Navigating to:", selectedItem.path);
+      navigate(selectedItem.path); // redirect
     }
   };
 
   return (
     <Dropdown
       menu={{
-        items,
-        onClick: handleMenuClick,
+        items: items.map((item) => ({ ...item, type: "item" })),
+        onClick: handleClick 
       }}
-      onOpenChange={handleOpenChange}
-      open={open}
+      trigger={["click"]}
     >
       <span
-        onClick={(e) => e.preventDefault()}
         className={`cursor-pointer text-blue-600 hover:underline ${className || ""}`}
       >
         <Space>

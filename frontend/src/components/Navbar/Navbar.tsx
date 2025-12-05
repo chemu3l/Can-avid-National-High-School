@@ -1,8 +1,7 @@
 import { logo } from "../../assets/images";
 import DropdownButton from "../Button/DropdownButton";
-import { FaFacebookF, FaEnvelope, } from "../../icons";
+import { FaFacebookF, FaEnvelope } from "../../icons/othersImport";
 import { aboutUsMenuItems, admissionMenuItems, navigationLabels } from "../../constants/navigationDropdowns";
-
 
 const Navbar = () => {
   const handleSelect = (key: string) => {
@@ -41,8 +40,6 @@ const Navbar = () => {
             <DropdownButton
               label={navigationLabels.aboutUs}
               items={aboutUsMenuItems}
-              onSelect={handleSelect}
-              closeOnSelect={true} // optional, defaults to true
               className="dropdown-button"
             />
           </li>
@@ -50,8 +47,6 @@ const Navbar = () => {
             <DropdownButton
               label={navigationLabels.admission}
               items={admissionMenuItems}
-              onSelect={handleSelect}
-              closeOnSelect={true} // optional, defaults to true
               className="dropdown-button"
             />
           </li>

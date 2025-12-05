@@ -1,15 +1,5 @@
 import Button  from "../Button/Button";
-
-interface HeroSectionProps {
-  title?: string;
-  subtitle?: string;
-  buttonText?: string;
-  image: string;
-  onButtonClick?: () => void;
-  className?: string;
-  icon?: React.ReactNode; // Optional icon
-  iconPosition?: "left" | "right"; // Icon placement
-}
+import type { HeroSectionInterface } from "../../types/Hero.interface";
 
 export default function HeroSection({
   title,
@@ -20,7 +10,7 @@ export default function HeroSection({
   className = "",
   icon,
   iconPosition = "left",
-}: HeroSectionProps) {
+}: HeroSectionInterface) {
   return (
     <div className={className} >
       <div className="hero-section">

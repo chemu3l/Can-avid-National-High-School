@@ -13,5 +13,25 @@ const VMCVDescription = {
         "Maka-bansa"
     ]
 }
-
-export { VMCVTitle, VMCVDescription };
+const VMCVList = [
+  {
+    title: VMCVTitle.vision,
+    description: VMCVDescription.vision,
+  },
+  {
+    title: VMCVTitle.mission,
+    description: VMCVDescription.mission,
+    preLine: true,
+  },
+  {
+    title: VMCVTitle.coreValue,
+    description: (
+      <ul>
+        {VMCVDescription.coreValues.map((value, index) => (
+          <li key={index}>{value}</li>
+        ))}
+      </ul>
+    ),
+  },
+];
+export { VMCVTitle, VMCVDescription, VMCVList };

@@ -1,15 +1,14 @@
 import { heroLandingImages } from "../../assets/images";
 import HeroSection from "../../components/Hero/HeroSection";
 import { buttonLabel } from "../../constants/buttonConstants";
-import { VMCVTitle, VMCVDescription } from "../../constants/VMCVCardConstants";
+import { VMCVList } from "../../constants/VMCVCardConstants";
 import { newsData } from "../../constants/mockData";
-import { FaAngleDoubleRight } from "../../icons";
+import { newestThree } from "../../utils/helper.utils";
+import { FaAngleDoubleRight } from "../../icons/othersImport";
 import NewsCard from "../../components/Card/NewsCard";
 
 const Home = () => {
-  const newestThree = newsData
-  .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-  .slice(0, 3);
+  const topThreeNews = newestThree(newsData);
   return (
     <div className="home-page">
       <HeroSection
@@ -21,37 +20,31 @@ const Home = () => {
         icon={<FaAngleDoubleRight />}
         iconPosition="right"
       />
-      <div className="VMCV-section">
-        <div className="VMCV-card">
-          <div className="title-content">{VMCVTitle.vision}</div>
-          <div className="description-content">{VMCVDescription.vision}</div>
-        </div>
-        <div className="VMCV-card">
-          <div className="title-content">{VMCVTitle.mission}</div>
-          <div className="description-content" style={{whiteSpace: "pre-line"}}>{VMCVDescription.mission}</div>
-        </div>
-        <div className="VMCV-card">
-          <div className="title-content">{VMCVTitle.coreValue}</div>
-          <div className="description-content">
-            <ul>
-              {VMCVDescription.coreValues.map((value, index) => (
-                <li key={index}>{value}</li>
-              ))}
-            </ul>
+    <div className="VMCV-section">
+      {VMCVList.map((item, index) => (
+        <div className="VMCV-card" key={index}>
+          <div className="title-content">{item.title}</div>
+
+          <div
+            className="description-content"
+            style={item.preLine ? { whiteSpace: "pre-line" } : {}}
+          >
+            {item.description}
           </div>
         </div>
-      </div>
-
-
+      ))}
+    </div>
       <div className="home-news-section">
             <div className="home-news-class">LATEST ANNOUNCEMENTS & EVENTS</div>
             <div className="home-news-class-card">
-              {newestThree.map((item) => (
+              {topThreeNews.map((item) => (
                 <NewsCard
+                  isAnnouncementsOrEvents={false}
                   key={item.id}
+                  cardType={item.mockDataType}
                   cardTitle={item.title}
-                  cardDescription={item.description}
-                  image={heroLandingImages}
+                  image={item.image}
+                  cardDate={item.createdAt}
                   className="News-Card-Title"
                   onClick={() => console.log("Clicked:", item.id)}
                 />
