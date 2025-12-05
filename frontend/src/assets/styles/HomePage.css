@@ -22,6 +22,7 @@
     padding: 10px;
     margin:  10px auto;
     color: var(--primary-font-color);
+    box-shadow: var(--box-shadow);
 }
 .VMCV-section .VMCV-card .description-content{
     font-size: 12px;
@@ -31,5 +32,34 @@
     border: 1px solid #e5e5e5;
     background: #fff;
     height: 300px;
-    whiteSpace: "pre-line"
+    box-shadow: var(--box-shadow);
+
 }
+
+.home-news-section{
+    align-items: center;  
+    margin:  40px auto;
+    gap: 50px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-news-section .home-news-class{
+    background-color: var(--green-background-color);
+    height: 20px;
+    max-width: 400px;
+    color: var(--primary-font-color);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.home-news-section  .home-news-class-card{
+    display: flex;
+    gap: 20px;
+}
+/* .home-news-section .home-news-class-card .News-Card-Title{
+    width: 50%;
+} */

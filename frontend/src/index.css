@@ -18,6 +18,7 @@
   --thirdy-font-family: 'Roboto';
   --primary-font-color: #FFFFFF;
   --title-font-size: 45px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 }
 
 a {
@@ -60,11 +61,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-
-
-
-
 
 @media (prefers-color-scheme: light) {
   :root {
