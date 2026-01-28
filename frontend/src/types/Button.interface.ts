@@ -10,6 +10,7 @@ export interface DropdownButtonInterface {
   label: string;
   items: DropdownItemInterface[];
   className?: string;
+  onItemClick?: () => void; 
 }
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,5 +23,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 export interface LinkButtonInterface {
   label: string,
-  link: string
+  link: string,
+  onClick?: () => void; 
+}
+
+export interface NavigationUnOrderListProps {
+  onItemClick?: () => void;
+  enableActive?: boolean;
 }

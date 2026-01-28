@@ -96,10 +96,10 @@
   background-color: var(--green-background-color);
   border-radius: 5px;
 }
-.LinkButton{
+.navbar .LinkButton{
     color: white;
 }
-.LinkButton:hover{
+.navbar .LinkButton:hover{
     color: white;
 }
 
@@ -112,7 +112,7 @@
   padding: var(--tablet-general-margin);
 }
 .left-top-bar{
-  width: var(--tablet-general-width);
+  /* width: var(--tablet-general-width); */
   justify-content: center;
 }
 }

@@ -1,8 +1,6 @@
 import { logo } from "../../assets/images";
-import DropdownButton from "../Button/DropdownButton";
+import NavigationUnOrderList from "./NavItems/NavBarUnOrderList";
 import { FaFacebookF, FaEnvelope } from "../../icons/othersImport";
-import { aboutUsMenuItems, admissionMenuItems, navigationLabels, navigationRoutes } from "../../constants/navigationDropdowns";
-import { LinkButton } from "../Button/Button";
 
 const Navbar = () => {
   return (
@@ -32,25 +30,7 @@ const Navbar = () => {
       </div>
       {/* Navigation Menu */}
       <nav className="navbar">
-        <ul>
-          <li><LinkButton label={navigationLabels.home} link={navigationRoutes.home}/></li>
-          <li>
-            <DropdownButton
-              label={navigationLabels.aboutUs}
-              items={aboutUsMenuItems}
-              className="dropdown-button"
-            />
-          </li>
-          <li>
-            <DropdownButton
-              label={navigationLabels.admission}
-              items={admissionMenuItems}
-              className="dropdown-button"
-            />
-          </li>
-          <li><LinkButton label={navigationLabels.career} link={navigationRoutes.career}/></li>
-          <li><LinkButton label={navigationLabels.contactUs} link={navigationRoutes.contactUs}/></li>
-        </ul>
+        <NavigationUnOrderList />
       </nav>
     </header>
   );

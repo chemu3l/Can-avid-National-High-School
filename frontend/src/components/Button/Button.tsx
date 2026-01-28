@@ -59,9 +59,10 @@ export const DropdownButton: React.FC<DropdownButtonInterface> = ({
 
 export const LinkButton: React.FC<LinkButtonInterface> = ({
   label,
-  link
+  link,
+  onClick
 }) => {
 return (
-  <Link className="LinkButton" to={link}>{label}</Link>
+  <Link className="LinkButton" to={link} onClick={onClick}>{label}</Link>
 );
 };

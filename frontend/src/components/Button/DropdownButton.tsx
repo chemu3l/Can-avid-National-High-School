@@ -9,6 +9,7 @@ const DropdownButton: React.FC<DropdownButtonInterface> = ({
   label,
   items,
   className,
+  onItemClick
 }) => {
   const navigate = useNavigate();
 
@@ -17,6 +18,7 @@ const DropdownButton: React.FC<DropdownButtonInterface> = ({
     if (selectedItem?.path) {
       console.log("Navigating to:", selectedItem.path);
       navigate(selectedItem.path); // redirect
+      onItemClick?.();
     }
   };
 

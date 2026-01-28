@@ -1,10 +1,11 @@
 import type { DropdownItemInterface } from "../types/Button.interface";
 
 const aboutUsMenuItems: DropdownItemInterface[] = [
-  { key: "1", label: "Department", path: "/about/departments" },
-  { key: "2", label: "Announcements", path: "/about/announcements" },
-  { key: "3", label: "Events", path: "/about/events" },
-  { key: "4", label: "MOOE", path: "/about/mooe" },
+  { key: "1", label: "Overview", path: "/about/" },
+  { key: "2", label: "Department", path: "/about/departments" },
+  { key: "3", label: "Announcements", path: "/about/announcements" },
+  { key: "4", label: "Events", path: "/about/events" },
+  { key: "5", label: "MOOE", path: "/about/mooe" },
 ];
 
 const admissionMenuItems: DropdownItemInterface[] = [

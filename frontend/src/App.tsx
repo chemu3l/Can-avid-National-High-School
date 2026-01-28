@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar.tsx";
-import AppRoutes from "./routes/AppRoutes.tsx";
-import Footer from "./components/Footer/Footer.tsx";
+import MainLayout from "./layout/Mainlayout.tsx";
+import SwipeDrawer from "./components/Drawer/Drawer.tsx";
+import "./assets/styles/DrawerNavigationList.css";
 import "./assets/styles/rootPage.css"
 import "./assets/styles/rootPage.css";
 import "./assets/styles/Navbar.css";
@@ -13,9 +13,8 @@ import "./assets/styles/PageNotFound.css";
 const App: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <AppRoutes />
-      <Footer />
+      <SwipeDrawer /> 
+      <MainLayout />
     </>
   );
 };
