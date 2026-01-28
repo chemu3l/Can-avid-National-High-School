@@ -2,7 +2,7 @@ import React from "react";
 import type { MenuProps } from "antd";
 import { Dropdown, Space } from "../../icons/antdImports";
 import { DownOutlined } from "../../icons/antdImports";
-import type { DropdownButtonInterface } from "../../types/Dropdown.interface";
+import type { DropdownButtonInterface } from "../../types/Button.interface";
 import { useNavigate } from "react-router-dom";
 
 const DropdownButton: React.FC<DropdownButtonInterface> = ({

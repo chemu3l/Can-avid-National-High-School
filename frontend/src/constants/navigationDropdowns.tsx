@@ -1,4 +1,4 @@
-import type { DropdownItemInterface } from "../types/Dropdown.interface";
+import type { DropdownItemInterface } from "../types/Button.interface";
 
 const aboutUsMenuItems: DropdownItemInterface[] = [
   { key: "1", label: "Department", path: "/about/departments" },
@@ -18,6 +18,10 @@ const navigationLabels = {
     admission: "Admission",
     career: "Career",
     contactUs: "Contact Us",
-
 }
-export {aboutUsMenuItems, admissionMenuItems, navigationLabels};
+const navigationRoutes = { 
+    home: "/",
+    career: "/career",
+    contactUs: "/contact-us",
+}
+export {aboutUsMenuItems, admissionMenuItems, navigationLabels, navigationRoutes};

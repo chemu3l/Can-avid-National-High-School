@@ -5,12 +5,12 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #EEEEEE;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --left-margin: 20%;
+  --tablet-general-margin: 1rem 2rem 1rem 5rem;
   --green-background-color: #5E936C;
   --white-background-color: #F3F4F6;
   --primary-font-family: 'Poppins';
@@ -19,7 +19,10 @@
   --primary-font-color: #FFFFFF;
   --secondary-font-color: #000;
   --title-font-size: 45px;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --font-size: clamp(0.75rem, 1vw, 1rem);
+  --tablet-general-width: 5rem;
+  --tablet-general-clip-path: polygon(0 0, 40% 0, 95% 100%, 0% 100%);
 }
 
 a {

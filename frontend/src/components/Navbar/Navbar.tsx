@@ -1,12 +1,10 @@
 import { logo } from "../../assets/images";
 import DropdownButton from "../Button/DropdownButton";
 import { FaFacebookF, FaEnvelope } from "../../icons/othersImport";
-import { aboutUsMenuItems, admissionMenuItems, navigationLabels } from "../../constants/navigationDropdowns";
+import { aboutUsMenuItems, admissionMenuItems, navigationLabels, navigationRoutes } from "../../constants/navigationDropdowns";
+import { LinkButton } from "../Button/Button";
 
 const Navbar = () => {
-  const handleSelect = (key: string) => {
-    console.log("Selected:", key);
-  };
   return (
     <header>
       {/* Top Bar */}
@@ -35,7 +33,7 @@ const Navbar = () => {
       {/* Navigation Menu */}
       <nav className="navbar">
         <ul>
-          <li>{navigationLabels.home}</li>
+          <li><LinkButton label={navigationLabels.home} link={navigationRoutes.home}/></li>
           <li>
             <DropdownButton
               label={navigationLabels.aboutUs}
@@ -50,8 +48,8 @@ const Navbar = () => {
               className="dropdown-button"
             />
           </li>
-          <li>{navigationLabels.career}</li>
-          <li>{navigationLabels.contactUs}</li>
+          <li><LinkButton label={navigationLabels.career} link={navigationRoutes.career}/></li>
+          <li><LinkButton label={navigationLabels.contactUs} link={navigationRoutes.contactUs}/></li>
         </ul>
       </nav>
     </header>

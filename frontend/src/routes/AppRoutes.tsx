@@ -1,11 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import "../assets/styles/rootPage.css";
-import "../assets/styles/Navbar.css";
-import "../assets/styles/HomePage.css";
-import "../assets/styles/HeroPage.css";
-import "../assets/styles/FooterPage.css";
-import "../assets/styles/PageNotFound.css";
+
 import Home from "../pages/Home/Home";
+import AboutUs from "../pages/About/AboutUs";
 import PageNotFound from "../pages/NotFound/PageNotFound";
 
 const AppRoutes = () => {
@@ -13,6 +9,7 @@ const AppRoutes = () => {
     <div className="page-container">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

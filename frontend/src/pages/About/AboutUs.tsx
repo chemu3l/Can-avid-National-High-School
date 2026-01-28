@@ -1,7 +1,6 @@
 import { heroLandingImages } from "../../assets/images";
 import HeroSection from "../../components/Hero/HeroSection";
-import { buttonLabel } from "../../constants/buttonConstants";
-import { FaAngleDoubleRight } from "../../icons";
+import { FaAngleDoubleRight } from "../../icons/othersImport";
 
 
 const Home = () => {

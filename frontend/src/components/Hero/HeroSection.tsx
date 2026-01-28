@@ -1,4 +1,4 @@
-import Button  from "../Button/Button";
+import {Button}  from "../Button/Button";
 import type { HeroSectionInterface } from "../../types/Hero.interface";
 
 export default function HeroSection({

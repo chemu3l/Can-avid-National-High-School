@@ -1,14 +1,11 @@
-import React from "react";
+import React  from "react";
+import type { MenuProps } from "antd";
+import { Dropdown, Space } from "../../icons/antdImports";
+import { DownOutlined } from "../../icons/antdImports";
+import type { DropdownButtonInterface, ButtonProps, LinkButtonInterface } from "../../types/Button.interface";
+import { useNavigate, Link } from "react-router-dom";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;                    // Text to display on the button
-  className?: string;                // CSS classes applied externally
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void; // Reusable onClick
-  icon?: React.ReactNode; // Optional icon
-  iconPosition?: "left" | "right"; // Icon placement
-}
-
-const Button: React.FC<ButtonProps> = ({ 
+export const Button: React.FC<ButtonProps> = ({ 
   label, 
   className, 
   onClick,   
@@ -25,4 +22,46 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export const DropdownButton: React.FC<DropdownButtonInterface> = ({
+  label,
+  items,
+  className,
+}) => {
+  const navigate = useNavigate();
+
+  const handleClick: MenuProps["onClick"] = (e) => {
+    const selectedItem = items.find(item => item.key === e.key);
+    if (selectedItem?.path) {
+      console.log("Navigating to:", selectedItem.path);
+      navigate(selectedItem.path); // redirect
+    }
+  };
+
+  return (
+    <Dropdown
+      menu={{
+        items: items.map((item) => ({ ...item, type: "item" })),
+        onClick: handleClick 
+      }}
+      trigger={["click"]}
+    >
+      <span
+        className={`cursor-pointer text-blue-600 hover:underline ${className || ""}`}
+      >
+        <Space>
+          {label}
+          <DownOutlined style={{ fontSize: 12 }} />
+        </Space>
+      </span>
+    </Dropdown>
+  );
+};
+
+export const LinkButton: React.FC<LinkButtonInterface> = ({
+  label,
+  link
+}) => {
+return (
+  <Link className="LinkButton" to={link}>{label}</Link>
+);
+};
