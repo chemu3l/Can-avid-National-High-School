@@ -27,4 +27,5 @@ const newsData = [
   }
 ];
 
-export {newsData};
+const homepageSubtitle = "Empowering students of Can-avid National High School to achieve excellence through quality education, innovation, and character development, guided by a commitment to holistic growth, strong values, and the pursuit of academic and personal success."
+export { newsData, homepageSubtitle };

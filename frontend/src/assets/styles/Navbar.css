@@ -4,21 +4,25 @@
   justify-content: space-between;
   background-color: var(--green-background-color);
   padding: 1rem 0rem 0rem;
-  color: white; 
+  color: white;
   font-size: var(--font-size);
   align-items: center;
-} 
-#top-bar-trapezoid p{
+}
+
+#top-bar-trapezoid p {
   font-family: var(--thirdy-font-family);
 }
-.right-top-bar{
-    display: flex;
+
+.right-top-bar {
+  display: flex;
 }
-.left-top-bar{
-    display: flex;
-    width: 21%;
+
+.left-top-bar {
+  display: flex;
+  width: 17%;
 }
-#top-bar-trapezoid{
+
+#top-bar-trapezoid {
   clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
   width: 24rem;
   background-color: white;
@@ -30,6 +34,13 @@
 }
 
 /* Main header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem var(--left-margin);
+}
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -71,48 +82,28 @@
   font-size: var(--font-size);
 }
 
-/* Navbar */
-.navbar {
-  background-color: var(--green-background-color);
-  font-family: var(--secondary-font-family);
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0px 40px;
-  padding: 5px var(--left-margin);
-  gap: 50px;
-  font-family: var(--secondary-font-family);
-}
-
-.navbar ul li {
-  position: relative;
-  color: white;
+.dropdown-button{
   cursor: pointer;
+  text-decoration: underline;
+  color: var(--blue-color);
 }
 
-.navbar ul li:hover {
-  background-color: var(--green-background-color);
-  border-radius: 5px;
-}
-.navbar .LinkButton{
-    color: white;
-}
-.navbar .LinkButton:hover{
-    color: white;
-}
-
-@media (min-width: 650px) and (max-width: 1650px) {
-  #top-bar-trapezoid{
-  clip-path: var(--tablet-general-clip-path);
-  width: var(--tablet-general-width);
-}
+@media (max-width: 800px) {
 .main-header {
-  padding: var(--tablet-general-margin);
-}
-.left-top-bar{
-  /* width: var(--tablet-general-width); */
-  justify-content: center;
+  padding: 1rem 1rem;
 }
 }
+@media (max-width: 599px) {
+  .main-header-drawer {
+    display: flex;;
+    align-items: center;;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .left-top-bar {
+    /* width: var(--tablet-general-width); */
+    justify-content: center;
+  }
+}
+

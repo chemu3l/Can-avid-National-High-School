@@ -13,16 +13,20 @@ const admissionMenuItems: DropdownItemInterface[] = [
   { key: "2", label: "Ask Form", path: "/admission/ask-form" },
 ];
 
-const navigationLabels = { 
-    home: "Home",
-    aboutUs: "About Us",
-    admission: "Admission",
-    career: "Career",
-    contactUs: "Contact Us",
+type MenuType = "aboutUs" | "admission"
+
+const menuMap: Record<MenuType, DropdownItemInterface[]> = {
+  aboutUs: aboutUsMenuItems,
+  admission: admissionMenuItems,
 }
-const navigationRoutes = { 
-    home: "/",
-    career: "/career",
-    contactUs: "/contact-us",
-}
-export {aboutUsMenuItems, admissionMenuItems, navigationLabels, navigationRoutes};
+
+const navigationLabels = ["Home", "Career", "Contact Us"] as const;
+type NavLabel = typeof navigationLabels[number];
+
+const navigationRoutes: Record<NavLabel, string> = {
+  Home: "/",
+  Career: "/career",
+  "Contact Us": "/contact-us",
+}; 
+
+export {aboutUsMenuItems, admissionMenuItems, navigationLabels, navigationRoutes, menuMap};

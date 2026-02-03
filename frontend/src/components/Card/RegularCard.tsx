@@ -1,57 +1,52 @@
-import React from "react";
-import { Card, Button, RightOutlined } from "../../icons/antdImports";
-import { truncateText, formatDate } from "../../utils/helper.utils";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import type { NewsCardInterface } from "../../types/NewsCard.interface";
  
- const RegularCard: React.FC<NewsCardInterface> = ({
-   cardType,
-   cardTitle,
-   cardDate,
-   className,
-   image,
- }) => {
-   return (
- <Card  
-        title={
-          <div
-            style={{
-              backgroundColor: "#5E936C",
-              color: "white",
-              padding: "5px 4px",
-              borderRadius: "4px",
-              textAlign: "center",
-            }}
-          >
-          {cardType}
-        </div>
-      }
-    style={{ width: 300, textAlign: 'center', height: 410, border: "none",  }} >
-    <Card
-          className={className}
-          style={{ height: 300 }}
-          cover={
-            image && (
-              <img
-                src={image}
-                alt={cardTitle}
-                draggable={false}
-                style={{ width: "100%", objectFit: "cover", border: "none" }}
-              />
-            )
-          }
-        actions={[
-            <span style={{ fontSize: "12px", color: "#040404", cursor: "default" }} key="date">
-              {cardDate ? formatDate(cardDate) : "Date"}
-            </span>,
-            <Button type="link" key="read-more" style={{ fontSize: "14px", padding: 10, borderRadius: "15px", border: "1px solid #e5e5e5", backgroundColor: "#D9D9D9", color: "#040404" }}>
-              Read more <RightOutlined />
-            </Button>,
-        ]}
+ const RegularCard = () => {
+
+    const handleReadMore = () => {
+    window.location.href = '/recipe-details';
+  };
+  
+  return (
+    <Card sx={{ maxWidth: 345, backgroundColor: '#e0e0e0' }}>
+      <CardHeader
+        title="Shrimp and Chorizo Paella"
+        sx={{ backgroundColor: '#4caf50', color: 'white' }}
+      />
+      <CardMedia
+        component="img"
+        height="194"
+        image="/static/images/cards/paella.jpg"
+        alt="Paella dish"
+      />
+      <CardContent>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          This impressive paella is a perfect party dish and a fun meal to cook
+          together with your guests. Add 1 cup of frozen peas along with the
+          mussels, if you like.
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          01/01/2026
+        </Typography>
+        <Button
+          variant="contained"
+          onClick={handleReadMore}
+          sx={{ marginLeft: 'auto' }}
         >
-          <p>{truncateText(cardTitle, 40)}</p>
-        </Card>
+          Read More
+        </Button>
+      </CardActions>
     </Card>
-    );
+  );
 };
 
 export default RegularCard;

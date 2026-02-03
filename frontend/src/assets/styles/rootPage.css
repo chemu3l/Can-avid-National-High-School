@@ -1,3 +1,28 @@
 .page-container{
     padding: 0px var(--left-margin);
 }
+.main-layout{
+    margin: 0px 50%;
+    width: 50%;
+    max-width: 500px;
+    background-color: var(--background-color);
+}
+.css-1ygil4i-MuiToolbar-root{
+    justify-content: center;
+    background-color: var(--green-background-color);
+    min-height: 40px !important;
+}
+.css-132icwf-MuiButtonBase-root-MuiButton-root{
+    padding: 9px 1.5rem !important;
+}
+.css-132icwf-MuiButtonBase-root-MuiButton-root:focus{
+    outline: none;
+}
+.css-130f8nx {
+    padding: 0px 1rem !important;
+}
+@media (max-width: 599px) {
+.css-1ygil4i-MuiToolbar-root{
+    justify-content: left;
+}
+}

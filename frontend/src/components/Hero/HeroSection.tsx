@@ -17,10 +17,10 @@ export default function HeroSection({
         {/* LEFT — TEXT */}
         <div>
           <h1 className="hero-section-title">
-            {title}
+            <b>{title}</b>
           </h1>
 
-          <p className="">
+          <p className="hero-section-subtitle">
             {subtitle}
           </p>
 
@@ -41,6 +41,7 @@ export default function HeroSection({
           <img
             src={image}
             alt="Hero Banner"
+            id="hero-img-id"
             className="w-full max-w-md rounded-2xl shadow-lg"
           />
         </div>

@@ -31,3 +31,7 @@ export interface NavigationUnOrderListProps {
   onItemClick?: () => void;
   enableActive?: boolean;
 }
+export interface DrawerFadeMenuProps {
+  menuType: "aboutUs" | "admission"
+  onCloseDrawer?: () => void
+}
