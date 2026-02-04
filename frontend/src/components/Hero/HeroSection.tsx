@@ -37,12 +37,12 @@ export default function HeroSection({
         </div>
 
         {/* RIGHT — IMAGE */}
-        <div className="flex justify-center">
+        <div className="flex justify-center" id="hero-images-container">
           <img
             src={image}
             alt="Hero Banner"
             id="hero-img-id"
-            className="w-full max-w-md rounded-2xl shadow-lg"
+            className="block w-full max-w-md rounded-2xl shadow-lg"
           />
         </div>
       </div>

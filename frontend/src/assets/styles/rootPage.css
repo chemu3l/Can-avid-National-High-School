@@ -13,13 +13,10 @@
     min-height: 40px !important;
 }
 .css-132icwf-MuiButtonBase-root-MuiButton-root{
-    padding: 9px 1.5rem !important;
+    padding: 9px 1rem !important;
 }
 .css-132icwf-MuiButtonBase-root-MuiButton-root:focus{
     outline: none;
-}
-.css-130f8nx {
-    padding: 0px 1rem !important;
 }
 @media (max-width: 599px) {
 .css-1ygil4i-MuiToolbar-root{
