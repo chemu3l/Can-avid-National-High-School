@@ -1,5 +1,6 @@
 .page-container{
     padding: 0px var(--left-margin);
+    background-color: var(--white-background-color);
 }
 .main-layout{
     margin: 0px 50%;
@@ -18,8 +19,14 @@
 .css-132icwf-MuiButtonBase-root-MuiButton-root:focus{
     outline: none;
 }
+.app-container{
+    background-color: var(--white-background-color);
+}
 @media (max-width: 599px) {
 .css-1ygil4i-MuiToolbar-root{
     justify-content: left;
+}
+.page-container{
+    padding: 0px !important;
 }
 }

@@ -12,13 +12,13 @@
   --left-margin: 15%;
   --tablet-general-margin: 1rem 2rem 1rem 5rem;
   --green-background-color: #5E936C;
-  --white-background-color: #F3F4F6;
+  --white-background-color: #ededed;
   --primary-font-family: 'Poppins';
   --secondary-font-family: 'Rosarivo';
   --thirdy-font-family: 'Roboto';
   --primary-font-color: #FFFFFF;
   --secondary-font-color: #000;
-  --title-font-size: 4rem;
+  --title-font-size: 3.5rem;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --font-size: clamp(0.75rem, 1vw, 1rem);
   --tablet-general-width: 5rem;
@@ -69,7 +69,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #ededed;
   }
   a:hover {
     color: #747bff;

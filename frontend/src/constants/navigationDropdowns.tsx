@@ -1,4 +1,4 @@
-import type { DropdownItemInterface } from "../types/Button.interface";
+import type { DropdownItemInterface } from "@/types/Button.interface";
 
 const aboutUsMenuItems: DropdownItemInterface[] = [
   { key: "1", label: "Overview", path: "/about/" },

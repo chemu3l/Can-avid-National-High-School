@@ -1,0 +1,214 @@
+.aboutUs-page .hero-div {
+  padding: 1rem 0rem 0rem 0rem;
+}
+.aboutUs-page .hero-section .hero-div .hero-section-subtitle {
+  line-height: 2;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+.aboutUs-page .cnhs-accredition-header {
+  display: flex !important;
+  background-color: #ededed !important;
+}
+.aboutUs-page .cnhs-accredition-header .cnhs-accredition-sub-header {
+  display: flex !important;
+  align-items: center !important;
+  background-color: #ededed !important;
+  --Paper-shadow: none !important;
+  padding: 2rem 0rem 0rem 0rem;
+}
+.aboutUs-page .cnhs-accredition-title {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+}
+.aboutUs-page .cnhs-accredition-title p {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.aboutUs-page .cnhs-accredition-green-header {
+  background-color: #5f946d;
+  width: 10%;
+  height: 80%;
+  padding: 5%;
+}
+
+.aboutUs-page .cnhs-accredition-values {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs-page .cnhs-accredition-values .box-values {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutUs-page .about-us-glance-of-the-school {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  width: 100%;
+}
+.aboutUs-page
+  .about-us-glance-of-the-school
+  .about-us-glance-of-the-school-box {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.aboutUs-page
+  .about-us-glance-of-the-school
+  .about-us-glance-of-the-school-box
+  .about-us-glance-of-the-school-header {
+  display: flex;
+  max-width: none;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  --Paper-shadow: none !important;
+  color: #0f0f0f;
+}
+.aboutUs-page
+  .about-us-glance-of-the-school
+  .about-us-glance-of-the-school-box
+  .about-us-glance-of-the-school-header-subtitle {
+  margin-top: 0px;
+  display: flex;
+  max-width: none;
+  justify-content: center;
+  font-size: 1rem;
+  --Paper-shadow: none !important;
+  color: #0f0f0f;
+}
+.aboutUs-page
+  .about-us-glance-of-the-school
+  .about-us-glance-of-the-school-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  flex-direction: column;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #5e936c;
+  margin-left: 5px;
+}
+.aboutUs-page
+  .about-us-glance-of-the-school
+  .about-us-glance-of-the-school-value
+  .glance-item-1 {
+  margin: 0;
+}
+
+.review-container .review-title-container {
+  display: flex;
+  justify-content: center;
+}
+.review-container .review-title-container h3 {
+  padding: 0.5rem 6rem;
+  background-color: #5e936c;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.review-container .img-container {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.review-container .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aboutUs-page .department-wrapper{ 
+  background-color: #EEEEEE;
+  height: 100rem;
+  width: 100%;
+}
+
+
+
+
+
+@media (max-width: 1209px) {
+  .aboutUs-page .about-us-glance-of-the-school {
+    padding: 3rem 1rem;
+  }
+  .aboutUs-page .about-us-glance-of-the-school .stack-glance {
+    row-gap: 5px;
+  }
+}
+@media (min-width: 689px) and (max-width: 1027px) {
+  .aboutUs-page .about-us-glance-of-the-school {
+    padding: 3rem 0rem;
+    height: 31rem;
+  }
+  .aboutUs-page .about-us-glance-of-the-school .stack-glance {
+    row-gap: 5px;
+  }
+}
+@media (max-width: 873px) {
+  .aboutUs-page .about-us-glance-of-the-school {
+    padding: 3rem 0rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 688px) {
+  .aboutUs-page .about-us-glance-of-the-school {
+    padding: 3rem 0rem;
+    height: 39rem;
+  }
+  .aboutUs-page .about-us-glance-of-the-school .stack-glance {
+    row-gap: 5px;
+  }
+}
+@media (min-width: 482px) and (max-width: 599px) {
+  .aboutUs-page .about-us-glance-of-the-school {
+    padding: 3rem 0rem;
+    height: 30rem;
+  }
+  .aboutUs-page .about-us-glance-of-the-school .stack-glance {
+    row-gap: 5px;
+  }
+}
+@media (max-width: 481px) {
+  .aboutUs-page .about-us-glance-of-the-school {
+    padding: 3rem 0rem;
+    height: 40rem;
+  }
+  .aboutUs-page .about-us-glance-of-the-school .stack-glance {
+    row-gap: 5px;
+  }
+  .review-container .review-title-container h3 {
+    padding: 0.5rem 2rem !important;
+  }
+}
+@media (max-width: 1877px) {
+  .aboutUs-page .hero-div {
+    padding: 0rem;
+  }
+  .aboutUs-page .hero-section .hero-div .hero-section-title {
+    margin-block-start: auto !important;
+  }
+}

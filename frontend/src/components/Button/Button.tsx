@@ -1,5 +1,5 @@
 import React from "react";
-import type { ButtonProps, LinkButtonInterface } from "../../types/Button.interface";
+import type { ButtonProps, LinkButtonInterface } from "@/types/Button.interface";
 import { Link } from "react-router-dom";
 
 export const Button: React.FC<ButtonProps> = ({ 

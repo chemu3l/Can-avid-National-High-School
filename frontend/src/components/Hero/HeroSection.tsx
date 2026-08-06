@@ -1,5 +1,7 @@
-import {Button}  from "../Button/Button";
-import type { HeroSectionInterface } from "../../types/Hero.interface";
+import { Button } from "@/components/Button/Button";
+import type { HeroSectionInterface } from "@/types/Hero.interface";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 export default function HeroSection({
   title,
@@ -7,45 +9,47 @@ export default function HeroSection({
   buttonText,
   image,
   onButtonClick,
-  className = "",
   icon,
   iconPosition = "left",
 }: HeroSectionInterface) {
   return (
-    <div className={className} >
-      <div className="hero-section">
-        {/* LEFT — TEXT */}
+    <Container maxWidth="xl" disableGutters={true}>
+      <Box>
         <div>
-          <h1 className="hero-section-title">
-            <b>{title}</b>
-          </h1>
+          <div className="hero-section">
+            {/* LEFT — TEXT */}
+            <div className="hero-div">
+              <h1 className="hero-section-title">
+                <b>{title}</b>
+              </h1>
 
-          <p className="hero-section-subtitle">
-            {subtitle}
-          </p>
+              <p className="hero-section-subtitle">{subtitle}</p>
 
-          {buttonText && (
-            <div className="hero-home-class-button">
-              <Button 
-                label={buttonText} 
-                className="hero-home-button" 
-                onClick={onButtonClick}         
-                icon={icon}
-                iconPosition={iconPosition}/>
+              {buttonText && (
+                <div className="hero-home-class-button">
+                  <Button
+                    label={buttonText}
+                    className="hero-home-button"
+                    onClick={onButtonClick}
+                    icon={icon}
+                    iconPosition={iconPosition}
+                  />
+                </div>
+              )}
             </div>
-          )}
-        </div>
 
-        {/* RIGHT — IMAGE */}
-        <div className="flex justify-center" id="hero-images-container">
-          <img
-            src={image}
-            alt="Hero Banner"
-            id="hero-img-id"
-            className="block w-full max-w-md rounded-2xl shadow-lg"
-          />
+            {/* RIGHT — IMAGE */}
+            <div className="flex justify-center" id="hero-images-container">
+              <img
+                src={image}
+                alt="Hero Banner"
+                id="hero-img-id"
+                className="block w-full max-w-md rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Box>
+    </Container>
   );
 }

@@ -11,40 +11,38 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
-import { navigationLabels, navigationRoutes } from '../constants/navigationDropdowns'
+import { navigationLabels, navigationRoutes } from '@/constants/navigationDropdowns'
 import Button from '@mui/material/Button'
+import { useScreenSize } from '@/hooks/useWindowSize';
 // Updated import path
-import FadeMenu, { DrawerFadeMenu } from '../components/Drawer/Drawer';
-import { FaEnvelope, FaFacebookF } from '../icons/othersImport'
-import { logo } from "../assets/images";
+import FadeMenu, { DrawerFadeMenu } from '@/components/Drawer/Drawer';
+import { FaEnvelope, FaFacebookF } from '@/icons/othersImport'
+import { logo } from "@/assets/images";
 
 // CSS IMPORTS
-import "../assets/styles/rootPage.css"
-import "../assets/styles/Navbar.css";
-import "../assets/styles/HomePage.css";
-import "../assets/styles/HeroPage.css";
-import "../assets/styles/FooterPage.css";
-import "../assets/styles/PageNotFound.css";
-import { useEffect, useState } from 'react'
+import "@/assets/styles/rootPage.css"
+import "@/assets/styles/Navbar.css";
+import "@/assets/styles/HomePage.css";
+import "@/assets/styles/HeroPage.css";
+import "@/assets/styles/AboutUsPage.css";
+import "@/assets/styles/FooterPage.css";
+import "@/assets/styles/PageNotFound.css";
 import { useNavigate } from 'react-router-dom'
-import AppRoutes from '../routes/AppRoutes'
+import AppRoutes from '@/routes/AppRoutes';
 
 const drawerWidth = 240
 
 function DrawerAppBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false)
   const navigate = useNavigate()
+  const { width } = useScreenSize();
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
   }
 
-
   const drawer = (
-    // Removed onClick={handleDrawerToggle} from the outer Box
     <Box sx={{ textAlign: 'center' }}>
       <header>
-        {/* Top Bar */}
-
         {/* Main Header */}
         <div className="main-header-drawer">
           <div className="logo-section">
@@ -79,16 +77,6 @@ function DrawerAppBar() {
   )
 
   const container = typeof window !== 'undefined' ? () => document.body : undefined;
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [windowWidth]);
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -96,7 +84,7 @@ function DrawerAppBar() {
       <AppBar component="nav">
         <header>
           {/* Top Bar */}
-          {windowWidth > 800 && (
+          {width > 800 && (
             <div className="top-bar">
               <div className="right-top-bar">
                 <div id="top-bar-trapezoid">
@@ -116,7 +104,7 @@ function DrawerAppBar() {
             </div>
 
             <button className="message-button">
-              {windowWidth > 400 ? (
+              {width > 400 ? (
                 <>
                   <span>MESSAGE US</span>
                   <FaEnvelope className="envelope-icon" />

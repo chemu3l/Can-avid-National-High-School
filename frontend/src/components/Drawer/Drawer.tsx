@@ -10,8 +10,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Box from '@mui/material/Box'
 import { useNavigate } from "react-router-dom"
 
-import type { DrawerFadeMenuProps } from '../../types/Button.interface'
-import { menuMap } from '../../constants/navigationDropdowns'
+import type { DrawerFadeMenuProps } from '@/types/Button.interface'
+import { menuMap } from '@/constants/navigationDropdowns'
 
 export default function FadeMenu({menuType, onCloseDrawer }: DrawerFadeMenuProps) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
